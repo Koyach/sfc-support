@@ -1,37 +1,18 @@
 import Image from "next/image";
 import ScrollReveal from "./components/ScrollReveal";
+import Loader from "./components/Loader";
+import CampusGallery from "./components/CampusGallery";
+import Header from "./components/Header";
 
 const CALENDAR_URL = "https://calendar.app.google/riCES5AXDQzaAwF37";
 
 export default function Home() {
   return (
     <>
+      <Loader />
       <ScrollReveal />
 
-      {/* ───── Header ───── */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <a href="#" className="text-sm font-bold tracking-wide text-[var(--blue-800)]">
-            SFC総合型サポート
-          </a>
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="#results" className="text-[0.8rem] text-gray-500 hover:text-gray-900 transition-colors">実績</a>
-            <a href="#support" className="text-[0.8rem] text-gray-500 hover:text-gray-900 transition-colors">サポート内容</a>
-            <a href="#pricing" className="text-[0.8rem] text-gray-500 hover:text-gray-900 transition-colors">料金</a>
-            <a href="#profile" className="text-[0.8rem] text-gray-500 hover:text-gray-900 transition-colors">講師</a>
-            <a href="#voices" className="text-[0.8rem] text-gray-500 hover:text-gray-900 transition-colors">合格者の声</a>
-            <a href="#faq" className="text-[0.8rem] text-gray-500 hover:text-gray-900 transition-colors">FAQ</a>
-          </nav>
-          <a
-            href={CALENDAR_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[var(--blue-600)] text-white text-[0.8rem] font-medium px-5 py-2.5 rounded-lg hover:bg-[var(--blue-700)] transition-colors"
-          >
-            無料面談を予約
-          </a>
-        </div>
-      </header>
+      <Header />
 
       <main>
         {/* ───── Hero ───── */}
@@ -339,6 +320,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ───── Campus Gallery ───── */}
+        <CampusGallery />
+
         {/* ───── Profile ───── */}
         <section id="profile" className="py-20 md:py-28">
           <div className="max-w-6xl mx-auto px-6">
@@ -348,13 +332,13 @@ export default function Home() {
             </div>
 
             <div className="reveal reveal-delay-2 max-w-3xl mx-auto flex flex-col md:flex-row gap-10 items-center">
-              <div className="w-48 h-48 rounded-full shrink-0 relative overflow-hidden">
+              <div className="w-56 h-56 rounded-full shrink-0 relative overflow-hidden">
                 <Image
                   src="/images/profile.jpg"
                   alt="谷昊埜"
                   fill
-                  className="object-cover object-top"
-                  sizes="192px"
+                  className="object-cover object-[center_20%] scale-125"
+                  sizes="224px"
                 />
               </div>
 
@@ -381,8 +365,8 @@ export default function Home() {
                   <a href="https://koyatani.com" target="_blank" rel="noopener noreferrer" className="text-[0.8rem] text-[var(--blue-600)] hover:underline">
                     ポートフォリオ →
                   </a>
-                  <a href="https://x.com/koyach777" target="_blank" rel="noopener noreferrer" className="text-[0.8rem] text-[var(--gray-500)] hover:underline">
-                    @koyach777
+                  <a href="https://www.instagram.com/koyatani_0828/" target="_blank" rel="noopener noreferrer" className="text-[0.8rem] text-[var(--gray-500)] hover:underline">
+                    @koyatani_0828
                   </a>
                 </div>
               </div>
