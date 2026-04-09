@@ -1,12 +1,14 @@
 "use client";
 
+import Image from "next/image";
+
 export default function CampusGallery() {
   const photos = [
-    { id: 1, label: "ミラコエ イベント" },
-    { id: 2, label: "国会議員との対談" },
-    { id: 3, label: "スキー競技" },
-    { id: 4, label: "ケニア 教育活動" },
-    { id: 5, label: "SFCキャンパス" },
+    { id: 1, label: "ミラコエ イベント", src: "/images/gallery/miracoe.jpg" },
+    { id: 2, label: "国会議員との対談", src: "/images/gallery/political.jpg" },
+    { id: 3, label: "スキー競技", src: "/images/gallery/skiing.jpg" },
+    { id: 4, label: "ケニア 教育活動", src: "/images/gallery/kenya.jpg" },
+    { id: 5, label: "高校生への講演", src: "/images/gallery/lecture.jpg" },
   ];
 
   return (
@@ -23,9 +25,18 @@ export default function CampusGallery() {
         {photos.map((photo) => (
           <div
             key={photo.id}
-            className="shrink-0 w-[300px] md:w-[400px] aspect-[3/2] rounded-xl bg-gradient-to-br from-[var(--blue-50)] to-[var(--gray-100)] border border-gray-200 snap-start flex items-center justify-center"
+            className="shrink-0 w-[300px] md:w-[400px] snap-start group"
           >
-            <p className="text-[var(--gray-400)] text-sm">{photo.label}</p>
+            <div className="relative aspect-[3/2] rounded-xl overflow-hidden">
+              <Image
+                src={photo.src}
+                alt={photo.label}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 300px, 400px"
+              />
+            </div>
+            <p className="mt-2 text-sm font-medium text-[var(--gray-600)]">{photo.label}</p>
           </div>
         ))}
 
