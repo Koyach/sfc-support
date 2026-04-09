@@ -2,23 +2,22 @@
 
 export default function CampusGallery() {
   const photos = [
-    { id: 1, label: "SFC写真 1" },
-    { id: 2, label: "SFC写真 2" },
-    { id: 3, label: "SFC写真 3" },
-    { id: 4, label: "SFC写真 4" },
-    { id: 5, label: "SFC写真 5" },
+    { id: 1, label: "ミラコエ イベント" },
+    { id: 2, label: "国会議員との対談" },
+    { id: 3, label: "スキー競技" },
+    { id: 4, label: "ケニア 教育活動" },
+    { id: 5, label: "SFCキャンパス" },
   ];
 
   return (
     <section className="py-16 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 mb-8">
-        <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Campus</p>
-        <h2 className="reveal reveal-delay-1 text-[clamp(1.4rem,3vw,2rem)] font-bold text-[var(--gray-900)]">SFCキャンパス</h2>
+        <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Activities</p>
+        <h2 className="reveal reveal-delay-1 text-[clamp(1.4rem,3vw,2rem)] font-bold text-[var(--gray-900)]">活動の記録</h2>
       </div>
 
       {/* Horizontal scroll */}
       <div className="reveal reveal-delay-2 flex gap-4 overflow-x-auto px-6 pb-4 snap-x snap-mandatory scrollbar-hide">
-        {/* Left spacer for max-w-6xl alignment */}
         <div className="shrink-0 w-[max(0px,calc((100vw-1152px)/2))]" />
 
         {photos.map((photo) => (
