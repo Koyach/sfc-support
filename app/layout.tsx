@@ -70,14 +70,14 @@ export default function RootLayout({
                 {
                   "@type": "Offer",
                   name: "月2回コース",
-                  price: "20000",
+                  price: "30000",
                   priceCurrency: "JPY",
-                  description: "月2回 x 1時間の1on1面談 + SFC生との座談会",
+                  description: "月2回 x 1時間の1on1面談 + SFC生との座談会 + 先輩マッチング",
                 },
                 {
                   "@type": "Offer",
                   name: "月1回コース",
-                  price: "25000",
+                  price: "20000",
                   priceCurrency: "JPY",
                   description: "月1回 x 1時間の1on1面談",
                 },

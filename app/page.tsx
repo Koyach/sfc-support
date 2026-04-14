@@ -79,16 +79,15 @@ export default function Home() {
 
         {/* ───── Results / Stats ───── */}
         <section id="results" className="py-20 bg-[var(--gray-50)]">
-          <div className="max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="grid grid-cols-3 gap-8">
               {[
                 { num: "100", unit: "%", label: "合格率" },
                 { num: "4", unit: "名", label: "合格実績" },
-                { num: "1/4", unit: "", label: "塾と比較した費用" },
                 { num: "1on1", unit: "", label: "完全個別指導" },
               ].map((stat, i) => (
                 <div key={i} className={`reveal reveal-delay-${i + 1} text-center`}>
-                  <div className="font-[family-name:var(--font-serif)] text-[clamp(2.5rem,6vw,3.5rem)] font-semibold text-[var(--blue-800)] leading-none">
+                  <div className="font-[family-name:var(--font-serif)] text-[clamp(2.2rem,5vw,3.2rem)] font-semibold text-[var(--blue-800)] leading-none">
                     {stat.num}
                     <span className="text-[0.6em] text-[var(--blue-500)]">{stat.unit}</span>
                   </div>
@@ -216,7 +215,7 @@ export default function Home() {
                       ["SFC内部情報", "直接提供", "間接的"],
                       ["先輩との接点", "座談会あり", "なし"],
                       ["指導形式", "完全1on1", "集団 or 少人数"],
-                      ["費用（総額目安）", "10〜20万円", "50〜150万円"],
+                      ["費用（月額）", "15,000〜30,000円", "月5〜15万円"],
                     ].map(([label, us, them], i) => (
                       <tr key={i} className="border-t border-gray-100">
                         <td className="px-6 py-4 font-medium text-[var(--gray-700)]">{label}</td>
@@ -237,6 +236,13 @@ export default function Home() {
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Pricing</p>
               <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">料金プラン</h2>
+            </div>
+
+            {/* Campaign banner */}
+            <div className="reveal reveal-delay-1 max-w-4xl mx-auto mb-10 bg-gradient-to-r from-[var(--blue-600)] to-[var(--blue-800)] text-white rounded-2xl p-6 text-center">
+              <p className="text-[0.7rem] font-medium tracking-widest uppercase text-blue-200 mb-1">Opening Campaign</p>
+              <p className="text-lg font-bold">開塾キャンペーン実施中</p>
+              <p className="mt-1 text-[0.85rem] text-blue-100">2026年5月末までに初回面談を実施し入塾された方は、キャンペーン価格が在籍中ずっと適用されます。</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -268,6 +274,9 @@ export default function Home() {
                 <p className="text-[0.75rem] font-medium tracking-widest uppercase text-blue-200">Standard</p>
                 <h3 className="mt-2 text-xl font-bold">月2回コース</h3>
                 <div className="mt-4">
+                  <span className="text-sm line-through text-blue-300">30,000円/月</span>
+                </div>
+                <div className="mt-1">
                   <span className="text-4xl font-bold">20,000</span>
                   <span className="text-lg ml-1">円/月</span>
                 </div>
@@ -276,7 +285,7 @@ export default function Home() {
                     "月2回 x 1時間の1on1面談",
                     "活動計画・志望理由書のフィードバック",
                     "SFC生との座談会（2ヶ月に1回）",
-                    "チャットでの質問対応",
+                    "先輩マッチング",
                   ].map((item, i) => (
                     <li key={i} className="flex gap-2">
                       <svg className="w-4 h-4 text-blue-300 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -301,7 +310,10 @@ export default function Home() {
                 <p className="text-[0.75rem] font-medium tracking-widest uppercase text-[var(--gray-500)]">Light</p>
                 <h3 className="mt-2 text-xl font-bold">月1回コース</h3>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold text-[var(--gray-900)]">25,000</span>
+                  <span className="text-sm line-through text-[var(--gray-400)]">20,000円/月</span>
+                </div>
+                <div className="mt-1">
+                  <span className="text-4xl font-bold text-[var(--gray-900)]">15,000</span>
                   <span className="text-lg ml-1 text-[var(--gray-500)]">円/月</span>
                 </div>
                 <p className="mt-4 text-[0.85rem] text-[var(--gray-500)] leading-relaxed flex-1">
@@ -317,6 +329,10 @@ export default function Home() {
                 </a>
               </div>
             </div>
+
+            <p className="reveal reveal-delay-4 text-center mt-6 text-[0.8rem] text-[var(--gray-400)]">
+              ※ キャンペーン価格は2026年5月末までに入塾された方に適用。通常料金: 月2回 30,000円/月、月1回 20,000円/月
+            </p>
           </div>
         </section>
 
@@ -382,7 +398,7 @@ export default function Home() {
               <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">合格者の声</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {[
                 {
                   name: "S.Hさん",
