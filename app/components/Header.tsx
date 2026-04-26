@@ -5,10 +5,10 @@ import { useState } from "react";
 const CALENDAR_URL = "https://calendar.app.google/riCES5AXDQzaAwF37";
 
 const NAV_ITEMS = [
-  { label: "実績", href: "#results" },
+  { label: "理念", href: "#philosophy" },
   { label: "サポート内容", href: "#support" },
   { label: "料金", href: "#pricing" },
-  { label: "講師", href: "#profile" },
+  { label: "講師", href: "#instructors" },
   { label: "合格者の声", href: "#voices" },
   { label: "FAQ", href: "#faq" },
 ];
@@ -19,8 +19,8 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="text-sm font-bold tracking-wide text-[var(--blue-800)]">
-          SFC総合型サポート
+        <a href="#" className="font-[family-name:var(--font-serif)] text-lg font-semibold tracking-wide text-[var(--blue-800)]">
+          Epoch<span className="text-[var(--blue-600)]">塾</span>
         </a>
 
         {/* Desktop nav */}

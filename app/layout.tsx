@@ -17,24 +17,24 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sfc-support.koyatani.com"),
-  title: "SFC総合型選抜サポート | 谷昊埜",
+  metadataBase: new URL("https://epoch.koyatani.com"),
+  title: "Epoch塾 | 最初のEpochを、ここで刻む。",
   description:
-    "慶應SFC在学生による総合型選抜の個別サポート。活動計画の壁打ち・志望理由書添削・SFC生との座談会。合格率100%（4名中4名）の実績。",
-  keywords: ["SFC", "総合型選抜", "慶應", "AO入試", "活動計画", "志望理由書", "SFC対策", "慶應SFC 総合型", "SFC 個別指導", "総合政策学部", "環境情報学部"],
+    "総合型選抜・AO入試の専門塾。志望理由書添削、活動計画の壁打ち、面接対策。合格を通過点に、自分が時代を区切る側に立つ最初の一歩を踏み出す塾。",
+  keywords: ["Epoch塾", "総合型選抜", "AO入試", "慶應", "SFC", "志望理由書", "活動計画", "個別指導", "総合政策学部", "環境情報学部"],
   openGraph: {
-    title: "SFC総合型選抜サポート | 谷昊埜",
+    title: "Epoch塾 | 最初のEpochを、ここで刻む。",
     description:
-      "慶應SFC在学生が直接サポート。合格率100%の個別指導。",
+      "総合型選抜・AO入試の専門塾。合格はゴールではなく、自分が時代を区切る側に立つ最初の一歩。",
     type: "website",
     locale: "ja_JP",
-    url: "https://sfc-support.koyatani.com",
-    siteName: "SFC総合型選抜サポート",
+    url: "https://epoch.koyatani.com",
+    siteName: "Epoch塾",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SFC総合型選抜サポート | 谷昊埜",
-    description: "慶應SFC在学生が直接サポート。合格率100%の個別指導。",
+    title: "Epoch塾 | 最初のEpochを、ここで刻む。",
+    description: "総合型選抜・AO入試の専門塾。合格を通過点に、自分が時代を区切る側に立つ最初の一歩を。",
   },
 };
 
@@ -52,10 +52,10 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "EducationalOrganization",
-              name: "SFC総合型選抜サポート",
-              url: "https://sfc-support.koyatani.com",
+              name: "Epoch塾",
+              url: "https://epoch.koyatani.com",
               description:
-                "慶應SFC在学生による総合型選抜の個別サポート。活動計画の壁打ち・志望理由書添削・SFC生との座談会。",
+                "総合型選抜・AO入試の専門塾。志望理由書添削、活動計画の壁打ち、面接対策を提供。",
               founder: {
                 "@type": "Person",
                 name: "谷昊埜",
@@ -72,7 +72,7 @@ export default function RootLayout({
                   name: "月2回コース",
                   price: "30000",
                   priceCurrency: "JPY",
-                  description: "月2回 x 1時間の1on1面談 + SFC生との座談会 + 先輩マッチング",
+                  description: "月2回 x 1時間の1on1面談 + 志望理由書添削 + 先輩マッチング",
                 },
                 {
                   "@type": "Offer",

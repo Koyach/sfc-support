@@ -24,15 +24,16 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-4">
-                  慶應SFC在学生による個別指導
+                  総合型選抜・AO入試 専門塾
                 </p>
-                <h1 className="reveal reveal-delay-1 text-[clamp(2rem,5vw,3.2rem)] font-bold leading-[1.3] text-[var(--gray-900)]">
-                  SFCに、合格する。<br />
-                  <span className="text-[var(--blue-600)]">その挑戦に、伴走する。</span>
+                <h1 className="reveal reveal-delay-1 font-[family-name:var(--font-serif)] text-[clamp(2rem,5vw,3.4rem)] font-semibold leading-[1.25] text-[var(--gray-900)]">
+                  最初のEpochを、<br />
+                  <span className="text-[var(--blue-600)]">ここで刻む。</span>
                 </h1>
                 <p className="reveal reveal-delay-2 mt-6 text-[1rem] leading-relaxed text-[var(--gray-600)] max-w-lg">
-                  総合型選抜でSFCに合格した在学生が、活動計画から志望理由書まで1on1でサポート。
-                  塾では得られない「中の人」の視点で、あなたの合格を導きます。
+                  私たちは、合格をゴールにしない。<br />
+                  AO・総合型選抜は、人生で初めて&ldquo;自分は何者で、何を世界に問うのか&rdquo;を言葉にする場だ。
+                  受験は通過点にすぎない。その先、時代を区切る側に立つ——その出発点を、ここから刻む。
                 </p>
 
                 <div className="reveal reveal-delay-3 mt-8 flex flex-col sm:flex-row gap-4">
@@ -56,17 +57,19 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Hero image */}
+              {/* Hero visual */}
               <div className="reveal reveal-delay-2 relative hidden lg:block">
-                <div className="aspect-[4/5] rounded-2xl overflow-hidden">
-                  <Image
-                    src="/images/profile.jpg"
-                    alt="谷昊埜"
-                    fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 1024px) 0vw, 40vw"
-                    priority
-                  />
+                <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-[var(--blue-800)] to-[var(--blue-900)] flex flex-col items-center justify-center text-white p-12 relative">
+                  <div className="absolute top-6 left-6 text-[0.65rem] tracking-[0.4em] uppercase text-blue-300/70">
+                    Epoch / e·poch
+                  </div>
+                  <p className="font-[family-name:var(--font-serif)] text-[3rem] font-semibold leading-tight text-center">
+                    時代を<br />区切る人を、<br />ここから。
+                  </p>
+                  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-px h-12 bg-blue-300/40" />
+                  <div className="absolute bottom-6 right-6 text-[0.65rem] tracking-widest uppercase text-blue-300/70">
+                    Epoch塾
+                  </div>
                 </div>
                 <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl px-5 py-3 border border-gray-100">
                   <p className="text-[0.7rem] text-[var(--gray-500)]">合格率</p>
@@ -77,8 +80,39 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ───── Philosophy ───── */}
+        <section id="philosophy" className="py-20 md:py-28 bg-[var(--gray-50)]">
+          <div className="max-w-3xl mx-auto px-6">
+            <div className="text-center mb-12">
+              <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Philosophy</p>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">私たちの理念</h2>
+            </div>
+
+            <div className="reveal reveal-delay-2 bg-white rounded-2xl border border-gray-100 p-8 md:p-12 leading-relaxed text-[var(--gray-700)] space-y-5 text-[0.95rem]">
+              <p>
+                一般入試が&ldquo;既存の枠で点を取る&rdquo;競技だとすれば、<br />
+                AO・総合型選抜は&ldquo;自分自身を定義する&rdquo;行為です。
+              </p>
+              <p>
+                志望理由書は、大学に選ばれるための書類ではない。<br />
+                <strong className="text-[var(--blue-700)]">あなたが世界に対して放つ、最初の宣言文</strong>です。
+              </p>
+              <p>
+                合格はゴールではありません。<br />
+                その先、10年・20年をかけて時代を区切る側に立つ——<br />
+                その出発点を、Epoch塾はここから刻みます。
+              </p>
+              <div className="pt-4 border-t border-gray-100">
+                <p className="font-[family-name:var(--font-serif)] text-[1.05rem] font-semibold text-[var(--blue-800)] tracking-wide">
+                  &mdash; 最初のEpochを、ここで刻む。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ───── Results / Stats ───── */}
-        <section id="results" className="py-20 bg-[var(--gray-50)]">
+        <section id="results" className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-6">
             <div className="grid grid-cols-3 gap-8">
               {[
@@ -109,27 +143,27 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 {
-                  icon: "🎯",
-                  title: "SFCに行きたいけど\n何から始めればいいかわからない",
-                  desc: "活動計画の立て方から一緒に考えます。SFCが求めている人物像を、在学生の視点でお伝えします。",
+                  num: "01",
+                  title: "総合型・AOで\n大学に行きたい",
+                  desc: "活動計画の立て方から一緒に考えます。あなたの興味の根を掘り起こし、志望大学に届く形で言語化します。",
                 },
                 {
-                  icon: "📝",
-                  title: "活動実績の作り方・\n見せ方に悩んでいる",
-                  desc: "活動の「量」ではなく「深さ」が大事。あなたの経験をSFCの言葉で語れるようにします。",
+                  num: "02",
+                  title: "志望理由書の\n書き方に悩んでいる",
+                  desc: "志望理由書は採点基準を満たす書類ではなく、あなたの宣言文。論理と表現の両面から、専属の添削講師が伴走します。",
                 },
                 {
-                  icon: "💡",
-                  title: "塾に通っているけど\nSFC特化のアドバイスが欲しい",
-                  desc: "一般的な総合型対策とSFC対策は違います。現役SFC生だからこそわかる視点を提供します。",
+                  num: "03",
+                  title: "“自分が何者か”を\n言葉にしたい",
+                  desc: "受験の枠を超えて、自分の問いを定義したい人へ。受験勉強ではなく、自分自身を定義する作業として総合型に向き合います。",
                 },
               ].map((card, i) => (
                 <div
                   key={i}
                   className={`reveal reveal-delay-${i + 1} bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-lg hover:shadow-blue-50 hover:border-blue-100 transition-all duration-300`}
                 >
-                  <span className="text-3xl">{card.icon}</span>
-                  <h3 className="mt-4 text-[1rem] font-bold leading-relaxed whitespace-pre-line text-[var(--gray-800)]">
+                  <span className="font-[family-name:var(--font-serif)] text-2xl font-semibold text-[var(--blue-500)]">{card.num}</span>
+                  <h3 className="mt-3 text-[1rem] font-bold leading-relaxed whitespace-pre-line text-[var(--gray-800)]">
                     {card.title}
                   </h3>
                   <p className="mt-3 text-[0.875rem] leading-relaxed text-[var(--gray-500)]">
@@ -154,22 +188,22 @@ export default function Home() {
                 {
                   num: "01",
                   title: "活動計画の壁打ち",
-                  desc: "SFCに刺さる活動とは何か。あなたの興味・経験を起点に、説得力のある活動計画を一緒に設計します。",
+                  desc: "志望大学に刺さる活動とは何か。あなたの興味・経験を起点に、説得力のある活動計画を一緒に設計します。",
                 },
                 {
                   num: "02",
                   title: "志望理由書の添削",
-                  desc: "構造・ロジック・表現を磨きます。SFCの求める「問い」の立て方を、合格者の視点でフィードバック。",
+                  desc: "構造・ロジック・表現を磨きます。専属の添削講師が、書き手の中にある問いを引き出し、宣言文として磨き上げます。",
                 },
                 {
                   num: "03",
-                  title: "SFC生との座談会",
-                  desc: "2ヶ月に1回、あなたの分野に近い先輩（2〜4年生）をマッチング。リアルなSFC生活と研究を直接聞けます。",
+                  title: "面接対策",
+                  desc: "総合型の面接で問われるのは「知識」ではなく「思考のプロセス」。模擬面接で実践的に準備します。",
                 },
                 {
                   num: "04",
-                  title: "面接対策",
-                  desc: "SFCの面接で問われるのは「知識」ではなく「思考のプロセス」。模擬面接で実践的に準備します。",
+                  title: "先輩との座談会",
+                  desc: "2ヶ月に1回、あなたの分野に近いSFC在学生をマッチング。リアルな大学生活と研究を直接聞けます。",
                 },
               ].map((item, i) => (
                 <div
@@ -196,7 +230,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Why us</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">塾との違い</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">他塾との違い</h2>
             </div>
 
             <div className="reveal reveal-delay-2 max-w-3xl mx-auto">
@@ -205,14 +239,14 @@ export default function Home() {
                   <thead>
                     <tr className="bg-[var(--gray-50)]">
                       <th className="px-6 py-4 text-[0.8rem] font-medium text-[var(--gray-500)]" />
-                      <th className="px-6 py-4 text-[0.8rem] font-bold text-[var(--blue-600)]">本サポート</th>
+                      <th className="px-6 py-4 text-[0.8rem] font-bold text-[var(--blue-600)]">Epoch塾</th>
                       <th className="px-6 py-4 text-[0.8rem] font-medium text-[var(--gray-500)]">総合型専門塾</th>
                     </tr>
                   </thead>
                   <tbody className="text-[0.875rem]">
                     {[
-                      ["指導者", "SFC合格者（在学生）", "講師（外部）"],
-                      ["SFC内部情報", "直接提供", "間接的"],
+                      ["指導者", "現役合格者・専属添削講師", "講師（外部）"],
+                      ["大学内部情報", "在学生から直接", "間接的"],
                       ["先輩との接点", "座談会あり", "なし"],
                       ["指導形式", "完全1on1", "集団 or 少人数"],
                       ["費用（月額）", "15,000〜30,000円", "月5〜15万円"],
@@ -284,7 +318,7 @@ export default function Home() {
                   {[
                     "月2回 x 1時間の1on1面談",
                     "活動計画・志望理由書のフィードバック",
-                    "SFC生との座談会（2ヶ月に1回）",
+                    "先輩との座談会（2ヶ月に1回）",
                     "先輩マッチング",
                   ].map((item, i) => (
                     <li key={i} className="flex gap-2">
@@ -339,51 +373,84 @@ export default function Home() {
         {/* ───── Campus Gallery ───── */}
         <CampusGallery />
 
-        {/* ───── Profile ───── */}
-        <section id="profile" className="py-20 md:py-28">
+        {/* ───── Instructors ───── */}
+        <section id="instructors" className="py-20 md:py-28">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
-              <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Instructor</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">講師プロフィール</h2>
+              <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Instructors</p>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">講師紹介</h2>
+              <p className="reveal reveal-delay-2 mt-3 text-[0.9rem] text-[var(--gray-500)]">専門領域の異なる講師陣が、それぞれの強みであなたの&ldquo;最初のEpoch&rdquo;を支えます。</p>
             </div>
 
-            <div className="reveal reveal-delay-2 max-w-3xl mx-auto flex flex-col md:flex-row gap-10 items-center">
-              <div className="w-56 h-56 rounded-full shrink-0 relative overflow-hidden">
-                <Image
-                  src="/images/profile.jpg"
-                  alt="谷昊埜"
-                  fill
-                  className="object-cover object-[center_20%] scale-125"
-                  sizes="224px"
-                />
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-bold">谷昊埜<span className="text-[var(--gray-400)] font-normal text-base ml-3">Koya Tani</span></h3>
-                <p className="mt-1 text-[0.85rem] text-[var(--blue-600)] font-medium">慶應義塾大学 総合政策学部（SFC）在学</p>
-                <p className="mt-4 text-[0.9rem] text-[var(--gray-600)] leading-relaxed">
-                  2025年、総合型選抜でSFCに合格。学生団体ミラコエ代表として55名の組織を率い、超党派の国会議員を招いた271名規模のイベントを実現。Bedrock Space COO。元フリースタイルスキーヤー（ジュニアワールドツアー2位）。これまで4名の受験生をサポートし、全員がSFCに合格。
-                </p>
-
-                {/* Specialties */}
-                <div className="mt-5">
-                  <p className="text-[0.75rem] font-medium tracking-widest uppercase text-[var(--gray-500)] mb-2">得意分野</p>
-                  <div className="flex flex-wrap gap-2">
-                    {["地方創生", "起業・アントレ", "問題解決", "教育", "AI・プログラミング"].map((tag) => (
-                      <span key={tag} className="text-[0.75rem] text-[var(--blue-700)] bg-[var(--blue-50)] px-3 py-1.5 rounded-full border border-[var(--blue-100)]">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+            {/* Tani Koya */}
+            <div className="reveal reveal-delay-2 max-w-4xl mx-auto bg-white border border-gray-100 rounded-2xl p-8 md:p-10 mb-6 hover:shadow-lg hover:shadow-blue-50 transition-all">
+              <div className="flex flex-col md:flex-row gap-10">
+                <div className="w-44 h-44 md:w-48 md:h-48 rounded-full shrink-0 relative overflow-hidden mx-auto md:mx-0">
+                  <Image
+                    src="/images/profile.jpg"
+                    alt="谷昊埜"
+                    fill
+                    className="object-cover object-[center_20%] scale-125"
+                    sizes="192px"
+                  />
                 </div>
 
-                <div className="mt-4 flex gap-3">
-                  <a href="https://koyatani.com" target="_blank" rel="noopener noreferrer" className="text-[0.8rem] text-[var(--blue-600)] hover:underline">
-                    ポートフォリオ →
-                  </a>
-                  <a href="https://www.instagram.com/koyatani_0828/" target="_blank" rel="noopener noreferrer" className="text-[0.8rem] text-[var(--gray-500)] hover:underline">
-                    @koyatani_0828
-                  </a>
+                <div className="flex-1">
+                  <p className="text-[0.7rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-2">代表講師 / 活動計画・面接対策</p>
+                  <h3 className="text-2xl font-bold">谷昊埜<span className="text-[var(--gray-400)] font-normal text-base ml-3">Koya Tani</span></h3>
+                  <p className="mt-1 text-[0.85rem] text-[var(--gray-500)] font-medium">慶應義塾大学 総合政策学部（SFC）在学</p>
+                  <p className="mt-4 text-[0.9rem] text-[var(--gray-600)] leading-relaxed">
+                    2025年、総合型選抜でSFCに合格。学生団体ミラコエ代表として55名の組織を率い、超党派の国会議員を招いた271名規模のイベントを実現。Bedrock Space COO。元フリースタイルスキーヤー（ジュニアワールドツアー2位）。これまで4名の受験生をサポートし、全員がSFCに合格。
+                  </p>
+
+                  <div className="mt-5">
+                    <p className="text-[0.7rem] font-medium tracking-widest uppercase text-[var(--gray-500)] mb-2">得意分野</p>
+                    <div className="flex flex-wrap gap-2">
+                      {["地方創生", "起業・アントレ", "問題解決", "教育", "AI・プログラミング"].map((tag) => (
+                        <span key={tag} className="text-[0.75rem] text-[var(--blue-700)] bg-[var(--blue-50)] px-3 py-1.5 rounded-full border border-[var(--blue-100)]">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex gap-3">
+                    <a href="https://koyatani.com" target="_blank" rel="noopener noreferrer" className="text-[0.8rem] text-[var(--blue-600)] hover:underline">
+                      ポートフォリオ →
+                    </a>
+                    <a href="https://www.instagram.com/koyatani_0828/" target="_blank" rel="noopener noreferrer" className="text-[0.8rem] text-[var(--gray-500)] hover:underline">
+                      @koyatani_0828
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Yamamoto Yuki */}
+            <div className="reveal reveal-delay-3 max-w-4xl mx-auto bg-white border border-gray-100 rounded-2xl p-8 md:p-10 hover:shadow-lg hover:shadow-blue-50 transition-all">
+              <div className="flex flex-col md:flex-row gap-10">
+                <div className="w-44 h-44 md:w-48 md:h-48 rounded-full shrink-0 mx-auto md:mx-0 bg-gradient-to-br from-[var(--blue-100)] to-[var(--blue-50)] flex items-center justify-center border border-[var(--blue-100)]">
+                  <span className="font-[family-name:var(--font-serif)] text-6xl font-semibold text-[var(--blue-600)]">Y</span>
+                </div>
+
+                <div className="flex-1">
+                  <p className="text-[0.7rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-2">添削講師 / 志望理由書</p>
+                  <h3 className="text-2xl font-bold">山本優季<span className="text-[var(--gray-400)] font-normal text-base ml-3">Yuki Yamamoto</span></h3>
+                  <p className="mt-1 text-[0.85rem] text-[var(--gray-500)] font-medium">志望理由書添削担当</p>
+                  <p className="mt-4 text-[0.9rem] text-[var(--gray-600)] leading-relaxed">
+                    志望理由書の添削を専門とする講師。書き手の中にある&ldquo;まだ言葉になっていない問い&rdquo;を引き出し、論理構造と表現の両面から、志望大学に届く宣言文へと磨き上げる。一文一文の言葉選びに丁寧に向き合うスタイル。
+                  </p>
+
+                  <div className="mt-5">
+                    <p className="text-[0.7rem] font-medium tracking-widest uppercase text-[var(--gray-500)] mb-2">担当領域</p>
+                    <div className="flex flex-wrap gap-2">
+                      {["志望理由書添削", "自由記述", "活動報告書", "文章構造", "言語化サポート"].map((tag) => (
+                        <span key={tag} className="text-[0.75rem] text-[var(--blue-700)] bg-[var(--blue-50)] px-3 py-1.5 rounded-full border border-[var(--blue-100)]">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -447,7 +514,7 @@ export default function Home() {
                 合格者の出願書類を<br />お見せできます
               </h2>
               <p className="text-[0.95rem] text-[var(--gray-600)] leading-relaxed mb-6">
-                実際にSFCに合格した受験生の自由記述・活動報告を、本人の許可を得た上でお見せしています。「どこまで書けばいいのか」「どんなレベルが求められるのか」が具体的にわかります。
+                実際に合格した受験生の自由記述・活動報告を、本人の許可を得た上でお見せしています。「どこまで書けばいいのか」「どんなレベルが求められるのか」が具体的にわかります。
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <div className="flex items-center gap-3 bg-[var(--blue-50)] border border-[var(--blue-100)] rounded-xl px-6 py-4">
@@ -496,7 +563,7 @@ export default function Home() {
                 },
                 {
                   q: "SFC以外の大学も対応していますか？",
-                  a: "現在はSFC（総合政策学部・環境情報学部）に特化しています。SFCに絞ることで、質の高いサポートを提供しています。",
+                  a: "現在は慶應SFC（総合政策学部・環境情報学部）の総合型選抜を中心にサポートしています。志望理由書添削は他大学のAO・総合型にも対応可能ですので、初回面談時にご相談ください。",
                 },
                 {
                   q: "保護者への説明はありますか？",
@@ -505,6 +572,10 @@ export default function Home() {
                 {
                   q: "途中でやめることはできますか？",
                   a: "月額制のため、いつでも解約可能です。契約期間の縛りはありません。",
+                },
+                {
+                  q: "講師は選べますか？",
+                  a: "代表講師（谷）が活動計画・面接対策、添削講師（山本）が志望理由書を担当する分担制です。コースには両方のサポートが含まれます。",
                 },
               ].map((item, i) => (
                 <div
@@ -527,12 +598,12 @@ export default function Home() {
         {/* ───── Final CTA ───── */}
         <section className="py-20 md:py-28 bg-[var(--blue-800)] text-white text-center">
           <div className="max-w-3xl mx-auto px-6">
-            <h2 className="reveal text-[clamp(1.6rem,4vw,2.4rem)] font-bold leading-tight">
-              まずは無料面談から。<br />
-              SFCへの第一歩を、一緒に。
+            <h2 className="reveal font-[family-name:var(--font-serif)] text-[clamp(1.6rem,4vw,2.4rem)] font-semibold leading-tight">
+              最初のEpochを、<br />
+              ここで刻む。
             </h2>
             <p className="reveal reveal-delay-1 mt-4 text-blue-200 text-[0.95rem]">
-              現在の状況をお聞きし、合格までのロードマップをお伝えします。
+              まずは無料面談から。現在の状況をお聞きし、合格までのロードマップをお伝えします。
             </p>
             <a
               href={CALENDAR_URL}
@@ -553,7 +624,7 @@ export default function Home() {
       <footer className="py-8 border-t border-gray-100">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[0.75rem] text-[var(--gray-400)]">
-            &copy; 2026 谷昊埜. All rights reserved.
+            &copy; 2026 Epoch塾. All rights reserved.
           </p>
           <a
             href="https://koyatani.com"
