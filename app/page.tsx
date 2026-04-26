@@ -57,27 +57,27 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Hero visual — kinetic typography layered behind portrait */}
+              {/* Hero visual — kinetic typography ABOVE the portrait */}
               <div className="relative hidden lg:block">
-                {/* Kinetic typography — background layer, flows in line by line */}
+                {/* Kinetic typography — sits above the image, flows in line by line */}
                 <div
                   aria-hidden
-                  className="absolute -top-10 -left-20 z-0 pointer-events-none select-none font-[family-name:var(--font-serif)] font-semibold leading-[0.92] tracking-tight text-[clamp(3.6rem,6.4vw,6.4rem)]"
+                  className="relative z-10 mb-6 select-none font-[family-name:var(--font-serif)] font-semibold leading-[0.95] tracking-tight text-[clamp(2.6rem,4.8vw,4.6rem)]"
                 >
                   <span className="flow-line block text-[var(--blue-900)]" style={{ ["--flow-delay" as string]: "0.45s" }}>
                     時代を、
                   </span>
-                  <span className="flow-line block pl-[1.4em] text-[var(--blue-700)]" style={{ ["--flow-delay" as string]: "0.85s" }}>
+                  <span className="flow-line block pl-[1.2em] text-[var(--blue-700)]" style={{ ["--flow-delay" as string]: "0.85s" }}>
                     区切る人を、
                   </span>
-                  <span className="flow-line block pl-[2.6em] text-[var(--blue-500)]" style={{ ["--flow-delay" as string]: "1.25s" }}>
+                  <span className="flow-line block pl-[2.4em] text-[var(--blue-500)]" style={{ ["--flow-delay" as string]: "1.25s" }}>
                     ここから。
                   </span>
                 </div>
 
-                {/* Portrait — foreground */}
-                <div className="relative z-10 ml-12 mt-20 reveal reveal-delay-3">
-                  <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/15 ring-1 ring-black/5">
+                {/* Portrait — below typography */}
+                <div className="relative reveal reveal-delay-3">
+                  <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/15 ring-1 ring-black/5">
                     <Image
                       src="/images/profile.jpg"
                       alt="Epoch塾 講師 谷昊埜｜慶應SFC総合政策学部在学・総合型選抜合格者"
@@ -105,31 +105,42 @@ export default function Home() {
         </section>
 
         {/* ───── Philosophy ───── */}
-        <section id="philosophy" className="py-20 md:py-28 bg-[var(--gray-50)]">
-          <div className="max-w-3xl mx-auto px-6">
-            <div className="text-center mb-12">
-              <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Philosophy</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">私たちの理念</h2>
-            </div>
+        <section id="philosophy" className="relative py-28 md:py-40 bg-[var(--gray-50)] overflow-hidden">
+          {/* Subtle decorative gradient */}
+          <div aria-hidden className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(37,99,235,0.05),transparent_50%),radial-gradient(circle_at_80%_70%,rgba(37,99,235,0.04),transparent_55%)]" />
 
-            <div className="reveal reveal-delay-2 bg-white rounded-2xl border border-gray-100 p-8 md:p-12 leading-relaxed text-[var(--gray-700)] space-y-5 text-[0.95rem]">
-              <p>
-                一般入試が&ldquo;既存の枠で点を取る&rdquo;競技だとすれば、<br />
-                AO・総合型選抜は&ldquo;自分自身を定義する&rdquo;行為です。
+          <div className="relative max-w-4xl mx-auto px-6 text-center">
+            <p className="reveal text-[0.75rem] font-medium tracking-[0.4em] uppercase text-[var(--blue-600)] mb-6">Philosophy</p>
+            <h2 className="reveal reveal-delay-1 font-[family-name:var(--font-serif)] text-[clamp(2rem,4vw,3.2rem)] font-semibold tracking-tight text-[var(--gray-900)] mb-16">
+              私たちの理念
+            </h2>
+
+            <div className="space-y-12 md:space-y-16">
+              <p className="reveal reveal-delay-2 font-[family-name:var(--font-serif)] text-[clamp(1.25rem,2.4vw,1.95rem)] leading-[1.9] text-[var(--gray-800)]">
+                一般入試が&ldquo;既存の枠で点を取る&rdquo;競技だとすれば、<br className="hidden sm:block" />
+                AO・総合型選抜は<span className="text-[var(--blue-700)] font-semibold">&ldquo;自分自身を定義する&rdquo;</span>行為です。
               </p>
-              <p>
-                志望理由書は、大学に選ばれるための書類ではない。<br />
-                <strong className="text-[var(--blue-700)]">あなたが世界に対して放つ、最初の宣言文</strong>です。
+
+              <p className="reveal reveal-delay-3 font-[family-name:var(--font-serif)] text-[clamp(1.25rem,2.4vw,1.95rem)] leading-[1.9] text-[var(--gray-800)]">
+                志望理由書は、大学に選ばれるための書類ではない。<br className="hidden sm:block" />
+                <span className="text-[var(--blue-700)] font-semibold">あなたが世界に対して放つ、最初の宣言文</span>です。
               </p>
-              <p>
-                合格はゴールではありません。<br />
-                その先、10年・20年をかけて時代を区切る側に立つ——<br />
+
+              <p className="reveal reveal-delay-4 font-[family-name:var(--font-serif)] text-[clamp(1.25rem,2.4vw,1.95rem)] leading-[1.9] text-[var(--gray-800)]">
+                合格はゴールではありません。<br className="hidden sm:block" />
+                その先、10年・20年をかけて時代を区切る側に立つ——<br className="hidden sm:block" />
                 その出発点を、Epoch塾はここから刻みます。
               </p>
-              <div className="pt-4 border-t border-gray-100">
-                <p className="font-[family-name:var(--font-serif)] text-[1.05rem] font-semibold text-[var(--blue-800)] tracking-wide">
-                  &mdash; 最初のEpochを、ここで刻む。
+            </div>
+
+            {/* Tagline — final, smaller */}
+            <div className="reveal reveal-delay-4 mt-20">
+              <div className="inline-flex items-center gap-4">
+                <span className="block w-12 h-px bg-[var(--blue-300)]" />
+                <p className="font-[family-name:var(--font-serif)] text-[clamp(1.05rem,1.6vw,1.35rem)] font-semibold text-[var(--blue-800)] tracking-wide">
+                  最初のEpochを、ここで刻む。
                 </p>
+                <span className="block w-12 h-px bg-[var(--blue-300)]" />
               </div>
             </div>
           </div>
