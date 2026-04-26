@@ -15,8 +15,8 @@ export default function CampusGallery() {
     <section className="py-16 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 mb-8">
         <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Activities</p>
-        <h2 className="reveal reveal-delay-1 text-[clamp(1.4rem,3vw,2rem)] font-bold text-[var(--gray-900)]">代表講師の活動記録</h2>
-        <p className="reveal reveal-delay-2 mt-2 text-[0.85rem] text-[var(--gray-500)]">谷昊埜が学生団体・国会議員対談・教育活動などで積み重ねてきた現場の記録。</p>
+        <h2 className="reveal reveal-delay-1 text-[clamp(1.4rem,3vw,2rem)] font-bold text-[var(--gray-900)]">講師の活動記録</h2>
+        <p className="reveal reveal-delay-2 mt-2 text-[0.85rem] text-[var(--gray-500)]">講師が学生団体・国会議員対談・教育活動などで積み重ねてきた現場の記録。</p>
       </div>
 
       {/* Horizontal scroll */}

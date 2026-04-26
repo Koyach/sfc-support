@@ -28,14 +28,12 @@ export default function Home() {
                     Epoch塾｜総合型選抜・AO入試 専門個別指導塾
                   </span>
                   <span className="block text-[clamp(2rem,5vw,3.4rem)] font-semibold">
-                    最初のEpochを、<br />
-                    <span className="text-[var(--blue-600)]">ここで刻む。</span>
+                    SFCに、合格する。<br />
+                    <span className="text-[var(--blue-600)]">その挑戦に、伴走する。</span>
                   </span>
                 </h1>
                 <p className="reveal reveal-delay-2 mt-6 text-[1rem] leading-relaxed text-[var(--gray-600)] max-w-lg">
-                  慶應SFC合格率100%（4名全員合格）。私たちは、合格をゴールにしない。
-                  AO・総合型選抜は、人生で初めて&ldquo;自分は何者で、何を世界に問うのか&rdquo;を言葉にする場。
-                  志望理由書添削の専属講師と現役SFC合格者が、活動計画の壁打ちから面接対策まで1on1で伴走します。
+                  慶應SFC合格率100%（4名全員合格）。総合型選抜でSFCに合格した在学生と、志望理由書添削の専属講師が、活動計画から面接対策まで1on1で伴走。塾では得られない「中の人」の視点で、あなたの合格を導きます。
                 </p>
 
                 <div className="reveal reveal-delay-3 mt-8 flex flex-col sm:flex-row gap-4">
@@ -59,23 +57,47 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Hero visual */}
-              <div className="reveal reveal-delay-2 relative hidden lg:block">
-                <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gradient-to-br from-[var(--blue-800)] to-[var(--blue-900)] flex flex-col items-center justify-center text-white p-12 relative">
-                  <div className="absolute top-6 left-6 text-[0.65rem] tracking-[0.4em] uppercase text-blue-300/70">
-                    Epoch / e·poch
-                  </div>
-                  <p className="font-[family-name:var(--font-serif)] text-[3rem] font-semibold leading-tight text-center">
-                    時代を<br />区切る人を、<br />ここから。
-                  </p>
-                  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-px h-12 bg-blue-300/40" />
-                  <div className="absolute bottom-6 right-6 text-[0.65rem] tracking-widest uppercase text-blue-300/70">
-                    Epoch塾
-                  </div>
+              {/* Hero visual — kinetic typography layered behind portrait */}
+              <div className="relative hidden lg:block">
+                {/* Kinetic typography — background layer, flows in line by line */}
+                <div
+                  aria-hidden
+                  className="absolute -top-10 -left-20 z-0 pointer-events-none select-none font-[family-name:var(--font-serif)] font-semibold leading-[0.92] tracking-tight text-[clamp(3.6rem,6.4vw,6.4rem)]"
+                >
+                  <span className="flow-line block text-[var(--blue-900)]" style={{ ["--flow-delay" as string]: "0.45s" }}>
+                    時代を、
+                  </span>
+                  <span className="flow-line block pl-[1.4em] text-[var(--blue-700)]" style={{ ["--flow-delay" as string]: "0.85s" }}>
+                    区切る人を、
+                  </span>
+                  <span className="flow-line block pl-[2.6em] text-[var(--blue-500)]" style={{ ["--flow-delay" as string]: "1.25s" }}>
+                    ここから。
+                  </span>
                 </div>
-                <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl px-5 py-3 border border-gray-100">
-                  <p className="text-[0.7rem] text-[var(--gray-500)]">合格率</p>
-                  <p className="text-2xl font-bold text-[var(--blue-600)]">100%</p>
+
+                {/* Portrait — foreground */}
+                <div className="relative z-10 ml-12 mt-20 reveal reveal-delay-3">
+                  <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/15 ring-1 ring-black/5">
+                    <Image
+                      src="/images/profile.jpg"
+                      alt="Epoch塾 講師 谷昊埜｜慶應SFC総合政策学部在学・総合型選抜合格者"
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 1024px) 0vw, 40vw"
+                      priority
+                    />
+                  </div>
+
+                  {/* Stat badge */}
+                  <div className="drift absolute -bottom-5 -left-8 bg-white rounded-xl shadow-xl px-5 py-3 border border-gray-100">
+                    <p className="text-[0.7rem] text-[var(--gray-500)] tracking-wider">合格率</p>
+                    <p className="text-2xl font-bold text-[var(--blue-600)] tabular-nums">100%</p>
+                  </div>
+
+                  {/* Decorative corner mark */}
+                  <div className="absolute -top-3 right-3 text-[0.6rem] tracking-[0.4em] uppercase text-[var(--blue-500)]/60 rotate-90 origin-top-right">
+                    Epoch · e·poch
+                  </div>
                 </div>
               </div>
             </div>
@@ -87,7 +109,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto px-6">
             <div className="text-center mb-12">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Philosophy</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">Epoch塾の理念｜&ldquo;最初のEpoch&rdquo;を刻む塾</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">私たちの理念</h2>
             </div>
 
             <div className="reveal reveal-delay-2 bg-white rounded-2xl border border-gray-100 p-8 md:p-12 leading-relaxed text-[var(--gray-700)] space-y-5 text-[0.95rem]">
@@ -134,55 +156,27 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ───── For Who ───── */}
+        {/* ───── For Who ─────
+            一時非表示（理念との文言矛盾の整理が済むまで）
         <section className="py-20 md:py-28">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Who is this for</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">こんな方におすすめ｜総合型選抜・AO入試で悩んでいる高校生へ</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">こんな方におすすめ</h2>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  num: "01",
-                  title: "総合型・AOで\n大学に行きたい",
-                  desc: "活動計画の立て方から一緒に考えます。あなたの興味の根を掘り起こし、志望大学に届く形で言語化します。",
-                },
-                {
-                  num: "02",
-                  title: "志望理由書の\n書き方に悩んでいる",
-                  desc: "志望理由書は採点基準を満たす書類ではなく、あなたの宣言文。論理と表現の両面から、専属の添削講師が伴走します。",
-                },
-                {
-                  num: "03",
-                  title: "“自分が何者か”を\n言葉にしたい",
-                  desc: "受験の枠を超えて、自分の問いを定義したい人へ。受験勉強ではなく、自分自身を定義する作業として総合型に向き合います。",
-                },
-              ].map((card, i) => (
-                <div
-                  key={i}
-                  className={`reveal reveal-delay-${i + 1} bg-white border border-gray-100 rounded-2xl p-8 hover:shadow-lg hover:shadow-blue-50 hover:border-blue-100 transition-all duration-300`}
-                >
-                  <span className="font-[family-name:var(--font-serif)] text-2xl font-semibold text-[var(--blue-500)]">{card.num}</span>
-                  <h3 className="mt-3 text-[1rem] font-bold leading-relaxed whitespace-pre-line text-[var(--gray-800)]">
-                    {card.title}
-                  </h3>
-                  <p className="mt-3 text-[0.875rem] leading-relaxed text-[var(--gray-500)]">
-                    {card.desc}
-                  </p>
-                </div>
-              ))}
+              ...cards...
             </div>
           </div>
         </section>
+        */}
 
         {/* ───── Support Content ───── */}
         <section id="support" className="py-20 md:py-28 bg-[var(--blue-900)] text-white">
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-blue-300 mb-3">Support</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">サポート内容｜活動計画・志望理由書添削・面接対策</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">サポート内容</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -232,7 +226,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Why us</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">他の総合型・AO塾との違い</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">他塾との違い</h2>
             </div>
 
             <div className="reveal reveal-delay-2 max-w-3xl mx-auto">
@@ -271,7 +265,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Pricing</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">料金プラン｜月額15,000円〜・初回面談無料</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">料金プラン</h2>
             </div>
 
             {/* Campaign banner */}
@@ -380,8 +374,8 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Instructors</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">講師紹介｜現役SFC合格者と志望理由書添削の専属講師</h2>
-              <p className="reveal reveal-delay-2 mt-3 text-[0.9rem] text-[var(--gray-500)]">専門領域の異なる講師陣が、それぞれの強みであなたの&ldquo;最初のEpoch&rdquo;を支えます。</p>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">講師紹介</h2>
+              <p className="reveal reveal-delay-2 mt-3 text-[0.9rem] text-[var(--gray-500)]">専門領域の異なる講師陣が、それぞれの強みで合格まで伴走します。</p>
             </div>
 
             {/* Tani Koya */}
@@ -398,7 +392,7 @@ export default function Home() {
                 </div>
 
                 <div className="flex-1">
-                  <p className="text-[0.7rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-2">代表講師 / 活動計画・面接対策</p>
+                  <p className="text-[0.7rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-2">講師 / 活動計画・面接対策</p>
                   <h3 className="text-2xl font-bold">谷昊埜<span className="text-[var(--gray-400)] font-normal text-base ml-3">Koya Tani</span></h3>
                   <p className="mt-1 text-[0.85rem] text-[var(--gray-500)] font-medium">慶應義塾大学 総合政策学部（SFC）在学</p>
                   <p className="mt-4 text-[0.9rem] text-[var(--gray-600)] leading-relaxed">
@@ -431,12 +425,18 @@ export default function Home() {
             {/* Yamamoto Yuki */}
             <div className="reveal reveal-delay-3 max-w-4xl mx-auto bg-white border border-gray-100 rounded-2xl p-8 md:p-10 hover:shadow-lg hover:shadow-blue-50 transition-all">
               <div className="flex flex-col md:flex-row gap-10">
-                <div className="w-44 h-44 md:w-48 md:h-48 rounded-full shrink-0 mx-auto md:mx-0 bg-gradient-to-br from-[var(--blue-100)] to-[var(--blue-50)] flex items-center justify-center border border-[var(--blue-100)]">
-                  <span className="font-[family-name:var(--font-serif)] text-6xl font-semibold text-[var(--blue-600)]">Y</span>
+                <div className="w-44 h-44 md:w-48 md:h-48 rounded-full shrink-0 mx-auto md:mx-0 relative overflow-hidden ring-1 ring-black/5">
+                  <Image
+                    src="/images/yamamoto.jpg"
+                    alt="Epoch塾 講師 山本優季｜志望理由書添削担当"
+                    fill
+                    className="object-cover object-[60%_30%] scale-110"
+                    sizes="192px"
+                  />
                 </div>
 
                 <div className="flex-1">
-                  <p className="text-[0.7rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-2">添削講師 / 志望理由書</p>
+                  <p className="text-[0.7rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-2">講師 / 志望理由書添削</p>
                   <h3 className="text-2xl font-bold">山本優季<span className="text-[var(--gray-400)] font-normal text-base ml-3">Yuki Yamamoto</span></h3>
                   <p className="mt-1 text-[0.85rem] text-[var(--gray-500)] font-medium">志望理由書添削担当</p>
                   <p className="mt-4 text-[0.9rem] text-[var(--gray-600)] leading-relaxed">
@@ -456,6 +456,35 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* And more — hint at additional team without exposing profiles */}
+            <div className="reveal reveal-delay-4 max-w-4xl mx-auto mt-8 flex items-center gap-6">
+              <div className="flex -space-x-3">
+                {[
+                  "var(--blue-200)",
+                  "var(--blue-300)",
+                  "var(--blue-400)",
+                  "var(--blue-500)",
+                ].map((color, i) => (
+                  <div
+                    key={i}
+                    className="w-9 h-9 rounded-full border-2 border-white shadow-sm"
+                    style={{ background: color }}
+                  />
+                ))}
+                <div className="w-9 h-9 rounded-full border-2 border-white shadow-sm bg-[var(--blue-700)] flex items-center justify-center text-[0.65rem] font-bold text-white">
+                  +
+                </div>
+              </div>
+              <div>
+                <p className="text-[0.85rem] font-semibold text-[var(--gray-800)]">
+                  ほか、各分野のプロフェッショナル講師が多数在籍。
+                </p>
+                <p className="mt-1 text-[0.78rem] text-[var(--gray-500)] leading-relaxed">
+                  受講生の関心領域に応じて、SFC内外のスペシャリストが個別にマッチング。詳細は初回面談でお伝えします。
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -464,7 +493,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Voices</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">合格者の声｜慶應SFC総合型選抜 合格実績</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">合格者の声</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -550,7 +579,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">FAQ</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">よくある質問｜Epoch塾FAQ</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">よくある質問</h2>
             </div>
 
             <div className="max-w-2xl mx-auto space-y-4">

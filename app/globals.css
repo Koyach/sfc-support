@@ -51,6 +51,35 @@
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
+/* Kinetic typography — stagger reveal for hero */
+@keyframes flow-line {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    clip-path: inset(0 0 0% 0);
+  }
+}
+
+.flow-line {
+  display: block;
+  animation: flow-line 1.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--flow-delay, 0s);
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.drift {
+  animation: drift 6s ease-in-out infinite;
+}
+
 /* Hide scrollbar for gallery */
 .scrollbar-hide {
   -ms-overflow-style: none;
