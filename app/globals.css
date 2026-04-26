@@ -80,6 +80,35 @@
   animation: drift 6s ease-in-out infinite;
 }
 
+/* Character-by-character reveal (left → right flow) */
+@keyframes char-reveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-14px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+.char {
+  display: inline-block;
+  opacity: 1;
+  white-space: pre;
+}
+
+.js-ready .char-reveal .char {
+  opacity: 0;
+}
+
+.js-ready .char-reveal.visible .char {
+  animation: char-reveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--char-delay, 0s);
+}
+
 /* Hide scrollbar for gallery */
 .scrollbar-hide {
   -ms-overflow-style: none;

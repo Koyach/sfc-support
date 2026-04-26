@@ -3,6 +3,7 @@ import ScrollReveal from "./components/ScrollReveal";
 import Loader from "./components/Loader";
 import CampusGallery from "./components/CampusGallery";
 import Header from "./components/Header";
+import CharFlow from "./components/CharFlow";
 
 const CALENDAR_URL = "https://calendar.app.google/riCES5AXDQzaAwF37";
 
@@ -57,47 +58,23 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Hero visual — kinetic typography ABOVE the portrait */}
-              <div className="relative hidden lg:block">
-                {/* Kinetic typography — sits above the image, flows in line by line */}
-                <div
-                  aria-hidden
-                  className="relative z-10 mb-6 select-none font-[family-name:var(--font-serif)] font-semibold leading-[0.95] tracking-tight text-[clamp(2.6rem,4.8vw,4.6rem)]"
-                >
-                  <span className="flow-line block text-[var(--blue-900)]" style={{ ["--flow-delay" as string]: "0.45s" }}>
-                    時代を、
-                  </span>
-                  <span className="flow-line block pl-[1.2em] text-[var(--blue-700)]" style={{ ["--flow-delay" as string]: "0.85s" }}>
-                    区切る人を、
-                  </span>
-                  <span className="flow-line block pl-[2.4em] text-[var(--blue-500)]" style={{ ["--flow-delay" as string]: "1.25s" }}>
-                    ここから。
-                  </span>
+              {/* Hero visual — portrait only */}
+              <div className="reveal reveal-delay-2 relative hidden lg:block">
+                <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/15 ring-1 ring-black/5">
+                  <Image
+                    src="/images/profile.jpg"
+                    alt="Epoch塾 講師 谷昊埜｜慶應SFC総合政策学部在学・総合型選抜合格者"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 0vw, 40vw"
+                    priority
+                  />
                 </div>
 
-                {/* Portrait — below typography */}
-                <div className="relative reveal reveal-delay-3">
-                  <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl shadow-blue-900/15 ring-1 ring-black/5">
-                    <Image
-                      src="/images/profile.jpg"
-                      alt="Epoch塾 講師 谷昊埜｜慶應SFC総合政策学部在学・総合型選抜合格者"
-                      fill
-                      className="object-cover object-top"
-                      sizes="(max-width: 1024px) 0vw, 40vw"
-                      priority
-                    />
-                  </div>
-
-                  {/* Stat badge */}
-                  <div className="drift absolute -bottom-5 -left-8 bg-white rounded-xl shadow-xl px-5 py-3 border border-gray-100">
-                    <p className="text-[0.7rem] text-[var(--gray-500)] tracking-wider">合格率</p>
-                    <p className="text-2xl font-bold text-[var(--blue-600)] tabular-nums">100%</p>
-                  </div>
-
-                  {/* Decorative corner mark */}
-                  <div className="absolute -top-3 right-3 text-[0.6rem] tracking-[0.4em] uppercase text-[var(--blue-500)]/60 rotate-90 origin-top-right">
-                    Epoch · e·poch
-                  </div>
+                {/* Stat badge */}
+                <div className="drift absolute -bottom-5 -left-5 bg-white rounded-xl shadow-xl px-5 py-3 border border-gray-100">
+                  <p className="text-[0.7rem] text-[var(--gray-500)] tracking-wider">合格率</p>
+                  <p className="text-2xl font-bold text-[var(--blue-600)] tabular-nums">100%</p>
                 </div>
               </div>
             </div>
@@ -111,33 +88,51 @@ export default function Home() {
 
           <div className="relative max-w-4xl mx-auto px-6 text-center">
             <p className="reveal text-[0.75rem] font-medium tracking-[0.4em] uppercase text-[var(--blue-600)] mb-6">Philosophy</p>
-            <h2 className="reveal reveal-delay-1 font-[family-name:var(--font-serif)] text-[clamp(2rem,4vw,3.2rem)] font-semibold tracking-tight text-[var(--gray-900)] mb-16">
+            <h2 className="reveal reveal-delay-1 font-[family-name:var(--font-shippori)] text-[clamp(2rem,4vw,3.2rem)] font-bold tracking-[0.04em] text-[var(--gray-900)] mb-20">
               私たちの理念
             </h2>
 
-            <div className="space-y-12 md:space-y-16">
-              <p className="reveal reveal-delay-2 font-[family-name:var(--font-serif)] text-[clamp(1.25rem,2.4vw,1.95rem)] leading-[1.9] text-[var(--gray-800)]">
-                一般入試が&ldquo;既存の枠で点を取る&rdquo;競技だとすれば、<br className="hidden sm:block" />
-                AO・総合型選抜は<span className="text-[var(--blue-700)] font-semibold">&ldquo;自分自身を定義する&rdquo;</span>行為です。
+            <div className="space-y-14 md:space-y-20 font-[family-name:var(--font-shippori)] text-[clamp(1.3rem,2.5vw,2.05rem)] leading-[2] tracking-wide text-[var(--gray-800)]">
+              <p className="reveal char-reveal">
+                <CharFlow
+                  segments={[
+                    { text: "一般入試が“既存の枠で点を取る”競技だとすれば、", break: true },
+                    { text: "AO・総合型選抜は" },
+                    { text: "“自分自身を定義する”", strong: true },
+                    { text: "行為です。" },
+                  ]}
+                  charDelay={0.025}
+                />
               </p>
 
-              <p className="reveal reveal-delay-3 font-[family-name:var(--font-serif)] text-[clamp(1.25rem,2.4vw,1.95rem)] leading-[1.9] text-[var(--gray-800)]">
-                志望理由書は、大学に選ばれるための書類ではない。<br className="hidden sm:block" />
-                <span className="text-[var(--blue-700)] font-semibold">あなたが世界に対して放つ、最初の宣言文</span>です。
+              <p className="reveal char-reveal">
+                <CharFlow
+                  segments={[
+                    { text: "志望理由書は、大学に選ばれるための書類ではない。", break: true },
+                    { text: "あなたが世界に対して放つ、最初の宣言文", strong: true },
+                    { text: "です。" },
+                  ]}
+                  charDelay={0.025}
+                />
               </p>
 
-              <p className="reveal reveal-delay-4 font-[family-name:var(--font-serif)] text-[clamp(1.25rem,2.4vw,1.95rem)] leading-[1.9] text-[var(--gray-800)]">
-                合格はゴールではありません。<br className="hidden sm:block" />
-                その先、10年・20年をかけて時代を区切る側に立つ——<br className="hidden sm:block" />
-                その出発点を、Epoch塾はここから刻みます。
+              <p className="reveal char-reveal">
+                <CharFlow
+                  segments={[
+                    { text: "合格はゴールではありません。", break: true },
+                    { text: "その先、10年・20年をかけて時代を区切る側に立つ——", break: true },
+                    { text: "その出発点を、Epoch塾はここから刻みます。" },
+                  ]}
+                  charDelay={0.022}
+                />
               </p>
             </div>
 
-            {/* Tagline — final, smaller */}
-            <div className="reveal reveal-delay-4 mt-20">
+            {/* Tagline — final */}
+            <div className="reveal reveal-delay-4 mt-24">
               <div className="inline-flex items-center gap-4">
                 <span className="block w-12 h-px bg-[var(--blue-300)]" />
-                <p className="font-[family-name:var(--font-serif)] text-[clamp(1.05rem,1.6vw,1.35rem)] font-semibold text-[var(--blue-800)] tracking-wide">
+                <p className="font-[family-name:var(--font-shippori)] text-[clamp(1.05rem,1.6vw,1.4rem)] font-bold text-[var(--blue-800)] tracking-[0.08em]">
                   最初のEpochを、ここで刻む。
                 </p>
                 <span className="block w-12 h-px bg-[var(--blue-300)]" />

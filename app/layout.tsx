@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Noto_Sans_JP, Source_Serif_4 } from "next/font/google";
+import { Noto_Sans_JP, Source_Serif_4, Shippori_Mincho_B1 } from "next/font/google";
 import "./globals.css";
 
 const SITE_URL = "https://sfc-support.koyatani.com";
@@ -19,6 +19,13 @@ const sourceSerif = Source_Serif_4({
   variable: "--font-serif",
   subsets: ["latin"],
   weight: ["400", "600"],
+  display: "swap",
+});
+
+const shippori = Shippori_Mincho_B1({
+  variable: "--font-shippori",
+  subsets: ["latin"],
+  weight: ["500", "700", "800"],
   display: "swap",
 });
 
@@ -435,7 +442,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${notoSans.variable} ${sourceSerif.variable} scroll-smooth`}>
+    <html lang="ja" className={`${notoSans.variable} ${sourceSerif.variable} ${shippori.variable} scroll-smooth`}>
       <head>
         <link rel="canonical" href={SITE_URL} />
         {STRUCTURED_DATA.map((data, i) => (
