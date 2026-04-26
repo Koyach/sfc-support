@@ -23,17 +23,19 @@ export default function Home() {
           <div className="relative max-w-6xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-4">
-                  総合型選抜・AO入試 専門塾
-                </p>
-                <h1 className="reveal reveal-delay-1 font-[family-name:var(--font-serif)] text-[clamp(2rem,5vw,3.4rem)] font-semibold leading-[1.25] text-[var(--gray-900)]">
-                  最初のEpochを、<br />
-                  <span className="text-[var(--blue-600)]">ここで刻む。</span>
+                <h1 className="reveal reveal-delay-1 font-[family-name:var(--font-serif)] leading-[1.25] text-[var(--gray-900)]">
+                  <span className="block text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-4 font-[family-name:var(--font-noto)]">
+                    Epoch塾｜総合型選抜・AO入試 専門個別指導塾
+                  </span>
+                  <span className="block text-[clamp(2rem,5vw,3.4rem)] font-semibold">
+                    最初のEpochを、<br />
+                    <span className="text-[var(--blue-600)]">ここで刻む。</span>
+                  </span>
                 </h1>
                 <p className="reveal reveal-delay-2 mt-6 text-[1rem] leading-relaxed text-[var(--gray-600)] max-w-lg">
-                  私たちは、合格をゴールにしない。<br />
-                  AO・総合型選抜は、人生で初めて&ldquo;自分は何者で、何を世界に問うのか&rdquo;を言葉にする場だ。
-                  受験は通過点にすぎない。その先、時代を区切る側に立つ——その出発点を、ここから刻む。
+                  慶應SFC合格率100%（4名全員合格）。私たちは、合格をゴールにしない。
+                  AO・総合型選抜は、人生で初めて&ldquo;自分は何者で、何を世界に問うのか&rdquo;を言葉にする場。
+                  志望理由書添削の専属講師と現役SFC合格者が、活動計画の壁打ちから面接対策まで1on1で伴走します。
                 </p>
 
                 <div className="reveal reveal-delay-3 mt-8 flex flex-col sm:flex-row gap-4">
@@ -85,7 +87,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto px-6">
             <div className="text-center mb-12">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Philosophy</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">私たちの理念</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">Epoch塾の理念｜&ldquo;最初のEpoch&rdquo;を刻む塾</h2>
             </div>
 
             <div className="reveal reveal-delay-2 bg-white rounded-2xl border border-gray-100 p-8 md:p-12 leading-relaxed text-[var(--gray-700)] space-y-5 text-[0.95rem]">
@@ -137,7 +139,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Who is this for</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">こんな方におすすめ</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">こんな方におすすめ｜総合型選抜・AO入試で悩んでいる高校生へ</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -180,7 +182,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-blue-300 mb-3">Support</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">サポート内容</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">サポート内容｜活動計画・志望理由書添削・面接対策</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -230,7 +232,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Why us</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">他塾との違い</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">他の総合型・AO塾との違い</h2>
             </div>
 
             <div className="reveal reveal-delay-2 max-w-3xl mx-auto">
@@ -269,7 +271,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Pricing</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">料金プラン</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">料金プラン｜月額15,000円〜・初回面談無料</h2>
             </div>
 
             {/* Campaign banner */}
@@ -378,7 +380,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Instructors</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">講師紹介</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">講師紹介｜現役SFC合格者と志望理由書添削の専属講師</h2>
               <p className="reveal reveal-delay-2 mt-3 text-[0.9rem] text-[var(--gray-500)]">専門領域の異なる講師陣が、それぞれの強みであなたの&ldquo;最初のEpoch&rdquo;を支えます。</p>
             </div>
 
@@ -388,7 +390,7 @@ export default function Home() {
                 <div className="w-44 h-44 md:w-48 md:h-48 rounded-full shrink-0 relative overflow-hidden mx-auto md:mx-0">
                   <Image
                     src="/images/profile.jpg"
-                    alt="谷昊埜"
+                    alt="Epoch塾 代表講師 谷昊埜｜慶應SFC総合政策学部 在学・総合型選抜合格者"
                     fill
                     className="object-cover object-[center_20%] scale-125"
                     sizes="192px"
@@ -462,7 +464,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">Voices</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">合格者の声</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">合格者の声｜慶應SFC総合型選抜 合格実績</h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -548,7 +550,7 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-6">
             <div className="text-center mb-14">
               <p className="reveal text-[0.75rem] font-medium tracking-widest uppercase text-[var(--blue-600)] mb-3">FAQ</p>
-              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">よくある質問</h2>
+              <h2 className="reveal reveal-delay-1 text-[clamp(1.6rem,3.5vw,2.4rem)] font-bold">よくある質問｜Epoch塾FAQ</h2>
             </div>
 
             <div className="max-w-2xl mx-auto space-y-4">

@@ -4,11 +4,11 @@ import Image from "next/image";
 
 export default function CampusGallery() {
   const photos = [
-    { id: 1, label: "ミラコエ イベント", src: "/images/gallery/miracoe.jpg" },
-    { id: 2, label: "国会議員との対談", src: "/images/gallery/political.jpg" },
-    { id: 3, label: "スキー競技", src: "/images/gallery/skiing.jpg" },
-    { id: 4, label: "ケニア 教育活動", src: "/images/gallery/kenya.jpg" },
-    { id: 5, label: "高校生への講演", src: "/images/gallery/lecture.jpg" },
+    { id: 1, label: "ミラコエ イベント", src: "/images/gallery/miracoe.jpg", alt: "Epoch塾 代表講師 谷昊埜が代表を務める学生団体ミラコエの選挙参加促進イベント" },
+    { id: 2, label: "国会議員との対談", src: "/images/gallery/political.jpg", alt: "超党派の国会議員を招いた271名規模のイベント — Epoch塾 代表講師の活動実績" },
+    { id: 3, label: "スキー競技", src: "/images/gallery/skiing.jpg", alt: "フリースタイルスキー ジュニアワールドツアー2位 — 谷昊埜の競技経歴" },
+    { id: 4, label: "ケニア 教育活動", src: "/images/gallery/kenya.jpg", alt: "ケニアでの教育活動 — Epoch塾 代表講師の海外活動経験" },
+    { id: 5, label: "高校生への講演", src: "/images/gallery/lecture.jpg", alt: "高校生への講演活動 — 総合型選抜・AO入試の合格ノウハウを伝える" },
   ];
 
   return (
@@ -31,7 +31,7 @@ export default function CampusGallery() {
             <div className="relative aspect-[3/2] rounded-xl overflow-hidden">
               <Image
                 src={photo.src}
-                alt={photo.label}
+                alt={photo.alt}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 768px) 300px, 400px"
