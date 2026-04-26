@@ -118,7 +118,7 @@ export const metadata: Metadata = {
     address: false,
   },
   verification: {
-    // google: "（Search Consoleの認証コードを取得したらここに入れる）",
+    google: "8ZkEJ-lThcmV9gYsTMnQgZQTwCtUqG38j-c3dvHAUCk",
   },
 };
 
