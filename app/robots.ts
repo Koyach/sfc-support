@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://epoch.koyatani.com/sitemap.xml",
+    sitemap: "https://sfc-support.koyatani.com/sitemap.xml",
   };
 }

@@ -17,7 +17,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://epoch.koyatani.com"),
+  metadataBase: new URL("https://sfc-support.koyatani.com"),
   title: "Epoch塾 | 最初のEpochを、ここで刻む。",
   description:
     "総合型選抜・AO入試の専門塾。志望理由書添削、活動計画の壁打ち、面接対策。合格を通過点に、自分が時代を区切る側に立つ最初の一歩を踏み出す塾。",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       "総合型選抜・AO入試の専門塾。合格はゴールではなく、自分が時代を区切る側に立つ最初の一歩。",
     type: "website",
     locale: "ja_JP",
-    url: "https://epoch.koyatani.com",
+    url: "https://sfc-support.koyatani.com",
     siteName: "Epoch塾",
   },
   twitter: {
@@ -53,7 +53,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "EducationalOrganization",
               name: "Epoch塾",
-              url: "https://epoch.koyatani.com",
+              url: "https://sfc-support.koyatani.com",
               description:
                 "総合型選抜・AO入試の専門塾。志望理由書添削、活動計画の壁打ち、面接対策を提供。",
               founder: {
